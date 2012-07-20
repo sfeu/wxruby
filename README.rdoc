@@ -30,7 +30,7 @@ http://rubygems.org/gems/wxruby-ruby19
 
 First, you can just download my binary version fo Ubuntu 12.04
 
-https://github.com/sfeu/wxruby/blob/master/wxruby-ruby19-2.0.2-x86-linux.gem
+https://github.com/downloads/sfeu/wxruby/wxruby-ruby19-2.0.2-x86-linux.gem
 
 if this does not work, you have to compile it yourself:  
 
