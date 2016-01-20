@@ -1,0 +1,6 @@
+lib/wx/version.rb
+obj
+src/*.cpp
+src/*.h
+*.so
+.*.un~

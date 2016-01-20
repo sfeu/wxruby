@@ -62,13 +62,6 @@ begin
 rescue LoadError # documentation tasks will not be available
 end
 
-# Rubygems library is required to build a gem, but not just to compile
-# the lib.
-begin
-  require "./rake/rakepackage"  
-rescue LoadError # package tasks will not be available
-end
-
 if (RUBY_PLATFORM =~ /linux/) && ((File.read("/etc/lsb-release") =~ /DISTRIB_ID\=Ubuntu$/) ||
 	(File.read("/etc/lsb-release") =~ /DISTRIB_ID\=Debian$/))
 	require "./rake/rakedeb"
