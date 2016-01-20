@@ -34,7 +34,12 @@ https://github.com/downloads/sfeu/wxruby/wxruby-ruby19-2.0.2-x86-linux.gem
 
 if this does not work, you have to compile it yourself:  
 
-sudo apt-get install swig
+wget http://sourceforge.net/projects/swig/files/swig/swig-1.3.38/swig-1.3.38.tar.gz/download -O swig-1.3.38.tar.gz
+tar xzf swig-*.tar.gz
+cd swig-*
+./configure
+make
+sudo make install
 
 cd wxruby
 

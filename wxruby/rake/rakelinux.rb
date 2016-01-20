@@ -8,7 +8,7 @@
 
 require './rake/rakeunixish'
 
-$extra_cppflags = '-Wno-unused-function '
+$extra_cppflags = '-Wno-unused-function -Wno-format-security'
 
 # create a .so binary
 $extra_ldflags = '-shared'

@@ -1,4 +1,4 @@
-require 'ftools'
+require 'fileutils'
 require 'yaml'
 
 $DEB_CONTROL = File.read("deb_helper/control")
