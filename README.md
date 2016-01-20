@@ -1,8 +1,8 @@
-= wxruby svn import (19/07/2012)
+# wxruby svn import (19/07/2012)
 
 * https://github.com/sfeu/wxruby
 
-== DESCRIPTION:
+## DESCRIPTION
 
 wxRuby is a cross-platform GUI library for creating desktop applications. It has a comprehensive widget set, and provides native look and feel on Windows, OS X and Linux. It's based on the mature and liberally-licensed wxWidgets framework.
 
@@ -26,14 +26,9 @@ old...
 
 http://rubygems.org/gems/wxruby-ruby19
 
-== INSTALL:
+## INSTALL
 
-First, you can just download my binary version fo Ubuntu 12.04
-
-https://github.com/downloads/sfeu/wxruby/wxruby-ruby19-2.0.2-x86-linux.gem
-
-if this does not work, you have to compile it yourself:  
-
+```
 wget http://sourceforge.net/projects/swig/files/swig/swig-1.3.38/swig-1.3.38.tar.gz/download -O swig-1.3.38.tar.gz
 tar xzf swig-*.tar.gz
 cd swig-*
@@ -42,13 +37,11 @@ make
 sudo make install
 
 cd wxruby
-
 rake
-
 RUBYOPT='-rpsych' WXRUBY_VERSION=2.0.2 rake gem 
+```
 
-
-== LICENSE:
+## LICENSE
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
