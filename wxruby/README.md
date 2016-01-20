@@ -1,6 +1,6 @@
-= README for wxRuby version 2.0
+# README for wxRuby version 2.0
 
-== Introduction
+## Introduction
 
 wxRuby is a cross-platform GUI library for Ruby, based on the wxWidgets
 GUI toolkit for C++. It uses native widgets wherever possible, providing
@@ -8,7 +8,7 @@ the correct look, feel and behaviour to GUI applications on Windows, OS
 X and Linux/GTK. wxRuby aims to provide a comprehensive solution to
 developing professional-standard desktop applications in Ruby. 
 
-== Installing wxRuby
+## Installing wxRuby
 
 wxRuby is distributed as pre-compiled binaries and source from the
 project's site on Rubyforge: http://wxruby.rubyforge.org/
@@ -17,15 +17,31 @@ For the majority of users, installation simply requires running 'gem
 install wxruby' on the command line. See INSTALL for further
 information.
 
-== wxRuby licence
+## Build from source
+
+```
+sudo apt-get install build-essential libwxgtk2.8-dev libwxbase2.8-dev libglu1-mesa-dev libgtk2.0-dev libpangox-1.0-dev
+wget http://sourceforge.net/projects/swig/files/swig/swig-1.3.38/swig-1.3.38.tar.gz/download -O swig-1.3.38.tar.gz
+tar xzf swig-*.tar.gz
+cd swig-*
+./configure
+make
+sudo make install
+
+cd wxruby
+rake
+gem build wxruby.gemspec
+```
+
+## wxRuby licence
 
 wxRuby is free and open-source. It is distributed under a liberal
 licence which is compatible with both free and commercial development.
 See LICENSE for more details.
 
-== FAQ
+## FAQ
 
-=== What platforms and operating systems are supported in wxRuby2?
+### What platforms and operating systems are supported in wxRuby2?
 
 Currently the following are fully supported:
 
@@ -38,7 +54,7 @@ but patches are welcome. It is likely to be much simpler to get wxRuby
 working on similar modern systems (eg FreeBSD or Solaris with GTK) than
 on legacy systems (eg Windows 98, Mac OS 9).
 
-=== Why would I choose wxruby over FXRuby, Ruby/GTK, Shoes etc?
+### Why would I choose wxruby over FXRuby, Ruby/GTK, Shoes etc?
    
 There are several fine GUI toolkits available for Ruby, but we consider
 that wxRuby offers a combination of features that no other toolkit can match:
@@ -51,7 +67,7 @@ that wxRuby offers a combination of features that no other toolkit can match:
 * Mature and actively developed foundation in wxWidgets
 * Easy to install and redistribute
    
-=== Why are native widgets important or helpful?
+### Why are native widgets important or helpful?
 
 The really important feature among the above is, for many people, native
 widgets. Several toolkits are to some degree able to simulate the native
@@ -69,7 +85,7 @@ Desktop conventions go beyond widget appearance, to the labelling and
 positioning of items in standard dialogs and menus. wxRuby offers
 features to help with these too.
 
-== Where can I ask a question, or report a bug?
+## Where can I ask a question, or report a bug?
 
 The main mailing list for those using wxRuby for GUI development is
 wxruby-users. General questions and queries of all sorts are appropriate
@@ -96,7 +112,7 @@ wxruby-development is a secondary mailing list for all those interested
 in the current and future development of wxRuby. The discussion on this
 list tends to deal more with the internals of the library.
 
-== How can I learn to use wxRuby?
+## How can I learn to use wxRuby?
 
 wxRuby is a large API and takes some time to learn. The wxRuby
 distribution comes with numerous samples which illustrate how to use
@@ -127,7 +143,7 @@ example, if you wanted answers about the "Grid" class, try searching for
 "wxGrid" as this will turn up results relating to wxWidgets and wxPython
 which may be relevant.
 
-== What wxWidgets features are supported by wxRuby?
+## What wxWidgets features are supported by wxRuby?
 
 wxRuby supports almost all of the wxWidgets 2.8.9 GUI API, around 300
 classes in total. wxWidgets classes that provide general programming
@@ -138,7 +154,7 @@ these cases it's preferable to use a Ruby library.
 If you know of a feature in wxWidgets that you would like to see
 supported in wxRuby
 
-== How does wxRuby 2.0 relate to the wxruby 0.6.0 release?
+## How does wxRuby 2.0 relate to the wxruby 0.6.0 release?
 
 wxRuby 0.6.0 was the last in a series of releases developed using a
 different approach in the early days of wxRuby. Work on this series
@@ -147,13 +163,13 @@ years of development have gone into wxRuby since, making it vastly more
 capable and correct than the 0.6.0 release, which is only offered for
 legacy applications. 
 
-== I am getting an error trying to install or compile wxRuby
+## I am getting an error trying to install or compile wxRuby
 
 Please double-check the INSTALL documents, and search the mailing list
 archives. If this doesn't help, please post your question on the wxruby
 mailing list (http://wxruby.rubyforge.org/wiki/wiki.pl?MailingLists)
 
-= Credits 
+# Credits 
 
 Kevin Smith established the wxRuby 2.0 project using SWIG in 2005. Since
 then it has benefitted from the input of dozens of volunteers, who have
@@ -193,6 +209,6 @@ Zach Dennis
 If your name is missing and should be here, please get in touch
 with the current development team.
 
-== Lead Maintainer
+## Lead Maintainer
 
 Alex Fenton: alex at pressure dot to

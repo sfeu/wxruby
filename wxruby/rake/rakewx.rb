@@ -3,7 +3,7 @@
 # released under the MIT-style wxruby2 license
 
 require "rbconfig"
-$ruby_exe = Config::CONFIG["ruby_install_name"]
+$ruby_exe = RbConfig::CONFIG["ruby_install_name"]
 
 # Skim all the SWIG sources to detect import/include dependencies that
 # should force recompiles
@@ -162,10 +162,10 @@ end
 
 desc "Install the WxRuby library to Ruby's lib directories"
 task :install => [ :default, *ALL_RUBY_LIB_FILES ] do | t |
-  dest_dir = Config::CONFIG['sitelibdir']
+  dest_dir = RbConfig::CONFIG['sitelibdir']
   force_mkdir File.join(dest_dir, 'wx')
   force_mkdir File.join(dest_dir, 'wx', 'classes')
-  cp TARGET_LIB, Config::CONFIG['sitearchdir']
+  cp TARGET_LIB, RbConfig::CONFIG['sitearchdir']
   ALL_RUBY_LIB_FILES.each do | lib_file |
     dest = lib_file.sub(/^lib/, dest_dir)
     cp lib_file, dest
@@ -175,9 +175,9 @@ end
 
 desc "Removes installed library files from site_ruby"
 task :uninstall do | t |
-  rm_rf File.join(Config::CONFIG['sitearchdir'],File.basename(TARGET_LIB))
-  rm_rf File.join(Config::CONFIG['sitelibdir'], 'wx.rb')
-  rm_rf File.join(Config::CONFIG['sitelibdir'], 'wx')
+  rm_rf File.join(RbConfig::CONFIG['sitearchdir'],File.basename(TARGET_LIB))
+  rm_rf File.join(RbConfig::CONFIG['sitelibdir'], 'wx.rb')
+  rm_rf File.join(RbConfig::CONFIG['sitelibdir'], 'wx')
 end
 
 desc "Generate C++ source and header files using SWIG"
