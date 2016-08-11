@@ -20,7 +20,7 @@ information.
 ## Build from source
 
 ```
-sudo apt-get install build-essential libwxgtk2.8-dev libwxbase2.8-dev libglu1-mesa-dev libgtk2.0-dev libpangox-1.0-dev
+sudo apt-get install build-essential libwxgtk2.8-dev libwxbase2.8-dev libglu1-mesa-dev libgtk2.0-dev libpangox-1.0-dev libwxgtk-media2.8-dev
 wget http://sourceforge.net/projects/swig/files/swig/swig-1.3.38/swig-1.3.38.tar.gz/download -O swig-1.3.38.tar.gz
 tar xzf swig-*.tar.gz
 cd swig-*
